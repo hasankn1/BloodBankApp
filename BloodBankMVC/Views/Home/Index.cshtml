@@ -1,0 +1,20 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome to the Blood Bank System</h1>
+    <p>Choose an option below to view information about Donation Centers or Blood Types:</p>
+
+    <div>
+        <!-- Button to go to Donation Centers -->
+        <a href="@Url.Action("Index", "DonationCenter")" class="btn btn-primary btn-lg">View Donation Centers</a>
+    </div>
+
+    <br />
+
+    <div>
+        <!-- Button to go to Blood Types///  -->
+        <a href="@Url.Action("Index", "BloodType", new { id = "ON_001" })" class="btn btn-success btn-lg">View Blood Types</a>
+    </div>
+</div>

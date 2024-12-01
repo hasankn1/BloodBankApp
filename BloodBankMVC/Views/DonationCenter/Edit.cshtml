@@ -1,0 +1,29 @@
+﻿@model BloodBank.Models.DonationCenter
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-success">
+        @TempData["SuccessMessage"]
+    </div>
+}
+
+@if (TempData["ErrorMessage"] != null)
+{
+    <div class="alert alert-danger">
+        @TempData["ErrorMessage"]
+    </div>
+}
+<h2>Edit Donation Center: @Model.Id, @Model.Area</h2>
+
+<form method="post" asp-action="Edit" asp-route-id="@Model.Id">
+    <label for="AddressLine1">Address Line 1</label>
+    <input type="text" name="AddressLine1" value="@Model.AddressLine1" />
+
+    <label for="AddressLine2">Address Line 2</label>
+    <input type="text" name="AddressLine2" value="@Model.AddressLine2" />
+
+    <label for="PostalCode">Postal Code</label>
+    <input type="text" name="PostalCode" value="@Model.PostalCode" />
+
+    <button type="submit">Update</button>
+</form>
+

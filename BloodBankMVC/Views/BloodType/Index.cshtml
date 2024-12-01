@@ -1,0 +1,32 @@
+﻿@model IEnumerable<BloodBank.Models.BloodTypeInfo>
+
+<h2>Blood Types for : @Model.FirstOrDefault()?.Area, @Model.FirstOrDefault()?.Id</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>Blood Type</th>
+            <th>Stock Level</th>
+            <th>Availability Status</th>
+            <th>Last Updated</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var bloodType in Model)
+        {
+            <tr>
+                <td>@bloodType.Type</td>
+                <td>@bloodType.StockLevel</td>
+                <td>@bloodType.AvailabilityStatus</td>
+                <td>@bloodType.LastUpdated</td>
+                <td>
+                    <a href="@Url.Action("Details", new { areaId = bloodType.Area, bloodTypeId = bloodType.Type })">Details</a> |
+                    <a href="@Url.Action("Edit", new { Id = bloodType.Id, bloodTypeId = bloodType.Type })">Edit</a> |
+                    <a href="@Url.Action("Delete", new { Id = bloodType.Id, bloodTypeId = bloodType.Type })">Delete</a> |
+                    <a href="@Url.Action("Create", new { Id = bloodType.Id })">Add Blood Type</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

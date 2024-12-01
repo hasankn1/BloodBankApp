@@ -1,0 +1,12 @@
+C:\Users\Hasan\Desktop\BloodBankApp-main\BloodBank\bin\Debug\net8.0\BloodBank.deps.json
+C:\Users\Hasan\Desktop\BloodBankApp-main\BloodBank\bin\Debug\net8.0\BloodBank.dll
+C:\Users\Hasan\Desktop\BloodBankApp-main\BloodBank\bin\Debug\net8.0\BloodBank.pdb
+C:\Users\Hasan\Desktop\BloodBankApp-main\BloodBank\obj\Debug\net8.0\BloodBank.csproj.AssemblyReference.cache
+C:\Users\Hasan\Desktop\BloodBankApp-main\BloodBank\obj\Debug\net8.0\BloodBank.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Hasan\Desktop\BloodBankApp-main\BloodBank\obj\Debug\net8.0\BloodBank.AssemblyInfoInputs.cache
+C:\Users\Hasan\Desktop\BloodBankApp-main\BloodBank\obj\Debug\net8.0\BloodBank.AssemblyInfo.cs
+C:\Users\Hasan\Desktop\BloodBankApp-main\BloodBank\obj\Debug\net8.0\BloodBank.csproj.CoreCompileInputs.cache
+C:\Users\Hasan\Desktop\BloodBankApp-main\BloodBank\obj\Debug\net8.0\BloodBank.dll
+C:\Users\Hasan\Desktop\BloodBankApp-main\BloodBank\obj\Debug\net8.0\refint\BloodBank.dll
+C:\Users\Hasan\Desktop\BloodBankApp-main\BloodBank\obj\Debug\net8.0\BloodBank.pdb
+C:\Users\Hasan\Desktop\BloodBankApp-main\BloodBank\obj\Debug\net8.0\ref\BloodBank.dll

@@ -1,0 +1,36 @@
+﻿@model BloodBank.Models.DonationCenter
+
+<h2>Create New Donation Center</h2>
+<form method="post" asp-action="Create">
+    <label for="Id">Id</label>
+    <input type="text" name="Id" />
+
+    <label for="Area">Area</label>
+    <input type="text" name="Area" />
+
+    <label for="AddressLine1">Address Line 1</label>
+    <input type="text" name="AddressLine1" />
+
+    <label for="AddressLine2">Address Line 2</label>
+    <input type="text" name="AddressLine2" />
+
+    <label for="PostalCode">Postal Code</label>
+    <input type="text" name="PostalCode" />
+
+    <label for="BloodTypes">Blood Types</label>
+    <div id="BloodTypesContainer">
+        <input type="text" name="BloodTypes[0].Type" placeholder="Blood Type" />
+        <input type="number" name="BloodTypes[0].StockLevel" placeholder="Stock Level" />
+        <input type="text" name="BloodTypes[0].AvailabilityStatus" placeholder="Availability Status" />
+        <input type="datetime-local" name="BloodTypes[0].LastUpdated" placeholder="Last Updated" />
+
+        <!-- Add more blood types dynamically (optional) -->
+    </div>
+
+    <label for="HoursOfOperation">Hours of Operation</label>
+    <input type="text" name="HoursOfOperation" />
+
+    <button type="submit">Create</button>
+</form>
+
+<a href="@Url.Action("Index")">Cancel</a>

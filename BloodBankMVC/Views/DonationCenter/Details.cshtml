@@ -1,0 +1,50 @@
+﻿@model BloodBank.Models.DonationCenter
+
+<h2>Details for Donation Center: @Model.Area, @Model.Id</h2>
+
+<p><strong>Address:</strong> @Model.AddressLine1, @Model.AddressLine2, @Model.PostalCode</p>
+<h3>Blood Stock Levels:</h3>
+<a href="@Url.Action("Index", "BloodType", new { id = Model.Id })">View Blood Stock Level</a>
+<h3>Blood Types Available:</h3>
+<ul>
+    @foreach (var bloodType in Model.BloodTypes)
+    {
+        <li>@bloodType.Type</li>
+    }
+</ul>
+
+<h3>Hours of Operation:</h3>
+<ul>
+    @foreach (var hours in Model.HoursOfOperation)
+    {
+        <li>@hours.Key: @hours.Value</li>
+    }
+</ul>
+
+<h4>Change Hours:</h4>
+<form method="post" asp-action="UpdateHours" asp-route-id="@Model.Id">
+    <!-- Hidden fields for required values -->
+    <input type="hidden" name="Area" value="@Model.Area" />
+    <input type="hidden" name="BloodTypes" value="@string.Join(",", Model.BloodTypes.Select(bt => bt.Type))" />
+    <input type="hidden" name="PostalCode" value="@Model.PostalCode" />
+    <input type="hidden" name="AddressLine1" value="@Model.AddressLine1" />
+    <input type="hidden" name="AddressLine2" value="@Model.AddressLine2" />
+
+    <ul>
+        @foreach (var hours in Model.HoursOfOperation)
+        {
+            <li>
+                <label for="HoursOfOperation_@hours.Key">@hours.Key</label>
+                <input type="text" id="HoursOfOperation_@hours.Key"
+                       name="HoursOfOperation[@hours.Key]"
+                       value="@hours.Value"
+                       placeholder="Enter hours (e.g., 9 AM - 5 PM)" />
+            </li>
+        }
+    </ul>
+    <button type="submit">Save Changes</button>
+</form>
+
+<a href="@Url.Action("Edit", new { id = Model.Id })">Edit</a> |
+<a href="@Url.Action("Delete", new { id = Model.Id })">Delete</a> |
+<a href="@Url.Action("UpdateHours", new { id = Model.Id })">Update Hours</a>

@@ -1,0 +1,14 @@
+﻿@model BloodBank.Models.BloodTypeInfo
+
+<h2>Blood Type Details: @Model.Type</h2>
+
+<p><strong>Area:</strong> @Model.Area</p>
+<p><strong>Stock Level:</strong> @Model.StockLevel</p>
+<p><strong>Availability Status:</strong> @Model.AvailabilityStatus</p>
+<p><strong>Last Updated:</strong> @Model.LastUpdated</p>
+
+<form method="post" action="@Url.Action("Delete", new { areaId = Model.Area, bloodTypeId = Model.Type })">
+    <button type="submit">Delete</button>
+</form>
+
+<a href="@Url.Action("Edit", new { areaId = Model.Area, bloodTypeId = Model.Type })">Edit</a>

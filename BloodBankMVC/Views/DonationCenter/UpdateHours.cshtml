@@ -1,0 +1,31 @@
+﻿@model BloodBank.Models.DonationCenter
+
+<h2>Update Hours of Operation</h2>
+
+
+<h3>Hours of Operation:</h3>
+<form method="post" asp-action="UpdateHours" asp-route-id="@Model.Id">
+    <ul>
+        @foreach (var hours in Model.HoursOfOperation)
+        {
+            <li>
+                <label for="HoursOfOperation_@hours.Key">@hours.Key</label>
+                <input type="text" id="HoursOfOperation_@hours.Key"
+                       name="HoursOfOperation[@hours.Key]"
+                       value="@hours.Value"
+                       placeholder="Enter hours (e.g., 9 AM - 5 PM)" />
+            </li>
+        }
+    </ul>
+    <button type="submit">Save Changes</button>
+</form>
+
+@if (!ViewData.ModelState.IsValid)
+{
+    <div class="text-danger">
+        @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+        {
+            <p>@error.ErrorMessage</p>
+        }
+    </div>
+}

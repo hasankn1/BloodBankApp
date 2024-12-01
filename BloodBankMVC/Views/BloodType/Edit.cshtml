@@ -1,0 +1,13 @@
+﻿@model BloodBank.Models.BloodTypeInfo
+
+<h2>Edit Blood Type: @Model.Type</h2>
+
+<form method="post">
+    <label for="StockLevel">Stock Level</label>
+    <input type="number" name="StockLevel" value="@Model.StockLevel" />
+
+    <label for="AvailabilityStatus">Availability Status</label>
+    <input type="text" name="AvailabilityStatus" value="@Model.AvailabilityStatus" />
+
+    <button type="submit">Update</button>
+</form>

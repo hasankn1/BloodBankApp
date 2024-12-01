@@ -1,0 +1,16 @@
+﻿@model BloodBank.Models.BloodTypeInfo
+
+<h2>Create New Blood Type for Area: @Model.Area, @Model.Id</h2>
+
+<form method="post" asp-action="Create">
+    <label for="Type">Blood Type</label>
+    <input type="text" name="Type" value="@Model.Type" />
+
+    <label for="StockLevel">Stock Level</label>
+    <input type="number" name="StockLevel" value="@Model.StockLevel" />
+
+    <label for="AvailabilityStatus">Availability Status</label>
+    <input type="text" name="AvailabilityStatus" value="@Model.AvailabilityStatus" />
+
+    <button type="submit">Create</button>
+</form>
