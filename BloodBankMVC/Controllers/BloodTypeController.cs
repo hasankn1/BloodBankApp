@@ -37,8 +37,6 @@ namespace BloodBankMVC.Controllers
             return View(bloodTypeDetails);
         }
 
-
-
         [HttpGet]
         public IActionResult Create(string id)
         {
@@ -72,12 +70,42 @@ namespace BloodBankMVC.Controllers
         }
 
 
+        // GET: Display the update form
         [HttpGet]
-        public async Task<IActionResult> Edit(string id, BloodTypeInfo model)
+        public async Task<IActionResult> Edit(string id, string bloodTypeId)
         {
-            await _service.UpdateBloodTypeAsync(id, model);
-            return RedirectToAction(nameof(Index), new { id });
+            // Fetch the blood type info to show current details
+            var bloodTypeDetails = await _service.GetBloodTypeByIdAsync(id, bloodTypeId);
+            if (bloodTypeDetails == null)
+            {
+                return NotFound();
+            }
+
+            return View(bloodTypeDetails); // Pass the model to the view
         }
+
+        // POST: Handle the update of the blood type
+        [HttpPost]
+        public async Task<IActionResult> Edit(string id, string bloodTypeId, BloodTypeInfo model)
+        {
+            if (ModelState.IsValid)
+            {
+                var success = await _service.UpdateBloodTypeAsync(id, model);
+                if (!success)
+                {
+                    ModelState.AddModelError("", "Failed to update blood type");
+                    return View(model); // Return to the form with error
+                }
+
+                return RedirectToAction(nameof(Index)); // Redirect to a success page (like index or details)
+            }
+
+            return View(model); // Return to the form with validation errors
+        }
+
+
+
+
 
         // GET: Display the update form
         [HttpGet]

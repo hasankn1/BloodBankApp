@@ -2,12 +2,23 @@
 
 <h2>Edit Blood Type: @Model.Type</h2>
 
-<form method="post" asp-action="UpdateStocklevel">
+<form method="post" asp-action="Edit" asp-route-id="@Model.Id" asp-route-bloodTypeId="@Model.Type">
+    <!-- Hidden fields for the other properties -->
+    <input type="hidden" name="Id" value="@Model.Id" />
+    <input type="hidden" name="Area" value="@Model.Area" />
+    
+
+    <!-- Fields to update -->
+    <label for="Type">Blood Type</label>
+    <input type="text" name="Type" value="@Model.Type" />
+
     <label for="StockLevel">Stock Level</label>
     <input type="number" name="StockLevel" value="@Model.StockLevel" />
 
     <label for="AvailabilityStatus">Availability Status</label>
     <input type="text" name="AvailabilityStatus" value="@Model.AvailabilityStatus" />
+
+    <input type="hidden" name="LastUpdated" value="@Model.LastUpdated" />
 
     <button type="submit">Update</button>
 </form>

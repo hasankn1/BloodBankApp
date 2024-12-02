@@ -49,11 +49,23 @@ namespace BloodBankMVC.Services
 
         public async Task<bool> AddDonationCenterAsync(DonationCenter donationCenter)
         {
-            var jsonRequest = JsonSerializer.Serialize(donationCenter);
+            var donationCenterDto = new DonationCenterCreateDto
+            {
+                Id = donationCenter.Id,
+                Area = donationCenter.Area,
+                AddressLine1 = donationCenter.AddressLine1,
+                AddressLine2 = donationCenter.AddressLine2,
+                PostalCode = donationCenter.PostalCode,
+                HoursOfOperation = donationCenter.HoursOfOperation,
+                //BloodTypes = donationCenter.BloodTypes // Ensure this is compatible
+            };
+
+            var jsonRequest = JsonSerializer.Serialize(donationCenterDto);
             var response = await _httpClient.PostAsync(BaseUrl, new StringContent(jsonRequest, Encoding.UTF8, "application/json"));
 
             return response.IsSuccessStatusCode;
         }
+
 
         public async Task<bool> UpdateDonationCenterAsync(string id, DonationCenter donationCenter)
         {

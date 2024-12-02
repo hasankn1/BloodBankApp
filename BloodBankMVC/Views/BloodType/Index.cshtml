@@ -21,13 +21,15 @@
                 <td>@bloodType.AvailabilityStatus</td>
                 <td>@bloodType.LastUpdated</td>
                 <td>
-                    <a href="@Url.Action("Details", new { Id = bloodType.Id, bloodTypeId = bloodType.Type })">Details</a> |
-                    <a href="@Url.Action("Edit", new { Id = bloodType.Id, bloodTypeId = bloodType.Type })">Edit</a> |
-                    <a href="@Url.Action("UpdateStockLevel", new { Id = bloodType.Id, bloodTypeId = bloodType.Type })">Update Stock Levels</a> |
+                    <a href="@Url.Action("Details", new { Id = bloodType.Id, bloodTypeId = bloodType.Type })" class="btn btn-primary">Details</a> |
+                    <a href="@Url.Action("Edit", new { Id = bloodType.Id, bloodTypeId = bloodType.Type })" class="btn btn-primary">Edit</a> |
+                    <a href="@Url.Action("UpdateStockLevel", new { Id = bloodType.Id, bloodTypeId = bloodType.Type })" class="btn btn-primary">Update Stock Levels</a> |
                     <a href="@Url.Action("Delete", new { id = bloodType.Id, bloodTypeId = bloodType.Type })" class="btn btn-danger">Delete</a>
+                    <a href="@Url.Action("Create", new { id = bloodType.Id })" class="btn btn-primary">Add Blood Type</a>
                 </td>
+
             </tr>
         }
     </tbody>
 </table>
-<a href="@Url.Action("Create", "BloodType", new { @Model.FirstOrDefault()?.Id })" class="btn btn-primary">Add Blood Type</a>
+

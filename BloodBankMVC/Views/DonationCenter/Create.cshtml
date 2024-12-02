@@ -23,25 +23,29 @@
     <!-- Hours of Operation -->
     <h3>Hours of Operation</h3>
     <ul>
-        @foreach (var hours in Model.HoursOfOperation)
-        {
-            <li>
-                <label for="HoursOfOperation_@hours.Key">@hours.Key</label>
-                <input type="text" id="HoursOfOperation_@hours.Key"
-                       name="HoursOfOperation[@hours.Key]"
-                       value="@hours.Value"
-                       placeholder="Enter hours (e.g., 9 AM - 5 PM)" />
-            </li>
-        }
+       <label for="HoursOfOperation">HoursOfOperation</label>
+        <input type="text" id="HoursOfOperation" name="HoursOfOperation" value="@Model.HoursOfOperation"/>
     </ul>
 
     <!-- Blood Types (Optional: Read-only or editable) -->
     <h3>Blood Types Available</h3>
     <ul>
+        <label for="Id">ID</label>
+        <input type="hidden" name="Id" value="@Model.Id" />
+        <label for="Area">Area</label>
+        <input type="hidden" name="Area" value="@Model.Area" />
+        <label for="BloodTypes">BloodTypes</label>
         <input type="hidden" name="BloodTypes" value="@Model.BloodTypes" />
+        <label for="Type">Type</label>
+        <input type="hidden" name="Type" value="" />
+        <input type="hidden" name="availabilityStatus" value="" />
+        <label for="StockLevel">StockLevel</label>
+        <input type="hidden" name="StockLevel" value="" />
+        <label for="LastUpdated">LastUpdated</label>
+        <input type="hidden" name="LastUpdated" value="" />
     </ul>
 
-    <button type="submit">Update</button>
+    <button type="submit">Create</button>
 </form>
 
 

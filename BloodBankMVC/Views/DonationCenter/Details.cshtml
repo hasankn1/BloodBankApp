@@ -4,7 +4,7 @@
 
 <p><strong>Address:</strong> @Model.AddressLine1, @Model.AddressLine2, @Model.PostalCode</p>
 <h3>Blood Stock Levels:</h3>
-<a href="@Url.Action("Index", "BloodType", new { id = Model.Id })">View Blood Stock Level</a>
+<a href="@Url.Action("Index", "BloodType", new { id = Model.Id })" class="btn btn-primary">View Blood Stock Level</a>
 <h3>Blood Types Available:</h3>
 <ul>
     @foreach (var bloodType in Model.BloodTypes)
@@ -43,8 +43,8 @@
             </li>
         }
     </ul>
-    <button type="submit">Save Changes</button>
+    <button type="submit" class="btn btn-primary">Save Changes</button>
 </form>
 
-<a href="@Url.Action("Edit", new { id = Model.Id })">Edit</a> |
-<a href="@Url.Action("Delete", new { id = Model.Id })">Delete</a>
+<a href="@Url.Action("Edit", new { id = Model.Id })" class="btn btn-primary">Edit</a>
+<a href="@Url.Action("Delete", new { id = Model.Id })" class="btn btn-danger">Delete</a>

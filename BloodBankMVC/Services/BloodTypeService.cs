@@ -7,6 +7,7 @@ using System.Text.Json.Serialization;
 using System.Linq;
 using System.Net.Http.Json;
 using Newtonsoft.Json;
+using System.Net.Http;
 
 namespace BloodBankMVC.Services
 {
@@ -20,20 +21,6 @@ namespace BloodBankMVC.Services
             _httpClient = httpClient;
         }
 
-        // Get all blood types for a specific area (e.g., Donation Center)
-        //public async Task<IEnumerable<BloodTypeInfo>> GetAllBloodTypesAsync(string id)
-        //{
-        //    var response = await _httpClient.GetAsync($"{BaseUrl}/{id}");
-        //    response.EnsureSuccessStatusCode();
-
-        //    var jsonResponse = await response.Content.ReadAsStringAsync();
-        //    var bloodType = JsonSerializer.Deserialize<IEnumerable<BloodTypeInfo>>(jsonResponse, new JsonSerializerOptions
-        //    { 
-        //        PropertyNameCaseInsensitive = true,
-        //        Converters = { new JsonStringEnumConverter() }
-        //    });
-        //    return bloodType;
-        //}
         public async Task<IEnumerable<BloodTypeInfo>> GetAllBloodTypesAsync(string id)
         {
             // Call to the API to retrieve donation center data
@@ -48,8 +35,6 @@ namespace BloodBankMVC.Services
 
             return bloodTypes ?? new List<BloodTypeInfo>(); // Return the deserialized list or an empty list
         }
-
-
 
         // Get details of a specific blood type
         public async Task<BloodTypeInfo> GetBloodTypeByIdAsync(string id, string bloodTypeId)
@@ -74,19 +59,45 @@ namespace BloodBankMVC.Services
         // Add a new blood type to a donation center
         public async Task<bool> AddBloodTypeAsync(string id, BloodTypeInfo model)
         {
-            var url = $"{BaseUrl}/{id}";
-            var jsonRequest = System.Text.Json.JsonSerializer.Serialize(model);
-            var response = await _httpClient.PostAsync(url, new StringContent(jsonRequest, Encoding.UTF8, "application/json"));
-            Console.WriteLine($"Saving BloodType to repository: {jsonRequest}");
-            Console.WriteLine($"Saving BloodType to repository: {response}");
-            return response.IsSuccessStatusCode;
+            try
+            {
+                var url = $"{BaseUrl}/{id}";
+
+                var options = new JsonSerializerOptions
+                {
+                    PropertyNamingPolicy = JsonNamingPolicy.CamelCase
+                };
+
+                var jsonRequest = System.Text.Json.JsonSerializer.Serialize(model, options);
+
+                Console.WriteLine($"Sending JSON: {jsonRequest}"); // Log the exact JSON being sent
+
+                var content = new StringContent(jsonRequest, Encoding.UTF8, "application/json");
+                var response = await _httpClient.PostAsync(url, content);
+
+                if (!response.IsSuccessStatusCode)
+                {
+                    var errorContent = await response.Content.ReadAsStringAsync();
+                    Console.WriteLine($"Error Status Code: {response.StatusCode}");
+                    Console.WriteLine($"Error Response Content: {errorContent}");
+                }
+
+                return response.IsSuccessStatusCode;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Exception in AddBloodTypeAsync: {ex.Message}");
+                Console.WriteLine($"Exception Stack Trace: {ex.StackTrace}");
+                return false;
+            }
         }
+
 
         // Update a blood type in a donation center
         public async Task<bool> UpdateBloodTypeAsync(string id, BloodTypeInfo model)
         {
-            var url = $"{BaseUrl}/{id}/{model.Id}";
-            var jsonRequest = System.Text.Json.JsonSerializer.Serialize(model);
+            var url = $"{BaseUrl}/{id}"; // Ensure the URL is correct
+            var jsonRequest = System.Text.Json.JsonSerializer.Serialize(model); // Serialize the model with all fields
             var response = await _httpClient.PutAsync(url, new StringContent(jsonRequest, Encoding.UTF8, "application/json"));
 
             return response.IsSuccessStatusCode;

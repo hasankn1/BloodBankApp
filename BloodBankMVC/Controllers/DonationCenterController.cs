@@ -30,22 +30,43 @@ public class DonationCenterController : Controller
     }
 
     [HttpGet]
+    public IActionResult Create()
+    {
+        // Initialize an empty model with default values
+        var model = new DonationCenter
+        {
+            HoursOfOperation = new Dictionary<string, string>(), // Ensure it's not null
+            BloodTypes = new List<BloodTypeInfo>() // Ensure it's not null
+        };
+
+        // Render the view with the empty model
+        return View(model);
+    }
+
+    [HttpPost]
+    [ValidateAntiForgeryToken] // Helps prevent CSRF attacks
     public async Task<IActionResult> Create(DonationCenter model)
     {
         if (!ModelState.IsValid)
         {
+            // Return the same view with the validation errors and submitted data
             return View(model);
         }
 
         var success = await _donationCenterService.AddDonationCenterAsync(model);
         if (success)
         {
+            // Redirect to the index or a success page
             return RedirectToAction("Index");
         }
 
+        // Add an error message to ModelState if the service call fails
         ModelState.AddModelError(string.Empty, "Failed to create donation center.");
         return View(model);
     }
+
+
+
     public async Task<IActionResult> Edit(string id)
     {
         var center = await _donationCenterService.GetDonationCenterByIdAsync(id);
