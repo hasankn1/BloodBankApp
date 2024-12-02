@@ -1,6 +1,7 @@
 ﻿# BloodBankApp
 Prepare Data: 
 	AWS DynamoDB (Link to the sample data here)
+
 API Implementation: 
 	C# .NET 8.0 (Class Library), 
 	C# ASP.NET 8.0 Web API Service (Web API)
@@ -14,13 +15,16 @@ API Implementation:
 		Http Put method
 		Http Patch method
 		Http Delete method
+
 Publish API: 
 	AWS ECS with Fargate for containerization and publication, 
 	AWS ECR to push the image
+
 Manage API:
 	Manage your published API using Google APIgee
 	Your API proxy policy should include “Verify API key”
 	Generate portal to support your potential API client(s) 
+
 Consume API:
 	Implemented a ASP.NET MVC Core Web App (Model-View-Controller) 8.0 client to consume the published API
 		Instantiated a HttpClient object 
