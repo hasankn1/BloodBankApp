@@ -39,7 +39,7 @@ Open the project, and ensure Docker Desktop is running and is using 'Linux Conta
 ![Screenshot 2024-12-02 154727](https://github.com/user-attachments/assets/2bcdfbc8-abf7-4cf6-8d76-2d97e3e7ad29)
 
 Grab your AWS IAM user credentials and put them into your 'appsettings.json' under the 'BloodBankAPI' project:
-![Screenshot 2024-12-02 160806](https://github.com/user-attachments/assets/2fd735bf-4284-402c-bfb3-8ba10679a9f1)
+![Screenshot 2024-12-02 160806 new](https://github.com/user-attachments/assets/d6020d5f-1ce4-4cbf-b812-eb2096d7edfe)
 
 After the project loads, right click BloodBankAPI and choose 'Publish to AWS'
 ![Screenshot 2024-12-02 155024](https://github.com/user-attachments/assets/09d49b81-0b0c-491b-b880-c58af0e82359)
