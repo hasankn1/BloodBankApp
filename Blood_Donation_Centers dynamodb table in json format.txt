@@ -1,0 +1,1352 @@
+{
+  "Id": {
+    "S": "ON_001"
+  },
+  "Address_Line_1": {
+    "S": "820 Wharncliffe Road South"
+  },
+  "Address_Line_2": {
+    "S": "London OP"
+  },
+  "Area": {
+    "S": "London"
+  },
+  "BloodTypes": {
+    "L": [
+      {
+        "M": {
+          "AvailabilityStatus": {
+            "S": "available"
+          },
+          "LastUpdated": {
+            "S": "2024-12-02"
+          },
+          "StockLevel": {
+            "N": "15"
+          },
+          "Type": {
+            "S": "B"
+          }
+        }
+      },
+      {
+        "M": {
+          "AvailabilityStatus": {
+            "S": "available"
+          },
+          "LastUpdated": {
+            "S": "2024-12-02"
+          },
+          "StockLevel": {
+            "N": "11"
+          },
+          "Type": {
+            "S": "O"
+          }
+        }
+      },
+      {
+        "M": {
+          "AvailabilityStatus": {
+            "S": "available"
+          },
+          "LastUpdated": {
+            "S": "2024-12-02"
+          },
+          "StockLevel": {
+            "N": "15"
+          },
+          "Type": {
+            "S": "y"
+          }
+        }
+      },
+      {
+        "M": {
+          "AvailabilityStatus": {
+            "S": "available"
+          },
+          "LastUpdated": {
+            "S": "2024-12-02"
+          },
+          "StockLevel": {
+            "N": "17"
+          },
+          "Type": {
+            "S": "F"
+          }
+        }
+      }
+    ]
+  },
+  "Hours_of_Operation": {
+    "M": {
+      "Friday": {
+        "S": "9:00 am - 1:00 pm"
+      },
+      "Monday": {
+        "S": "3:00 fm - 7:00 pm"
+      },
+      "Saturday": {
+        "S": "9:00 am - 1:00 pm"
+      },
+      "Sunday": {
+        "S": "Closed"
+      },
+      "Thursday": {
+        "S": "3:00 pm - 7:00 pm"
+      },
+      "Tuesday": {
+        "S": "9:00 am - 1:00 pm"
+      },
+      "Wednesday": {
+        "S": "3:00 pm - 7:00 pm"
+      }
+    }
+  },
+  "Postal_Code": {
+    "S": "N6J 2N4"
+  }
+}
+---------------------------------------------
+{
+  "Id": {
+    "S": "ON_002"
+  },
+  "Address_Line_1": {
+    "S": "94 Bridgeport Road East"
+  },
+  "Address_Line_2": {
+    "S": "Waterloo ON"
+  },
+  "Area": {
+    "S": "Kitchener-Waterloo"
+  },
+  "BloodTypes": {
+    "L": [
+      {
+        "M": {
+          "AvailabilityStatus": {
+            "S": "available"
+          },
+          "LastUpdated": {
+            "S": "2023-11-01"
+          },
+          "StockLevel": {
+            "N": "50"
+          },
+          "Type": {
+            "S": "A+"
+          }
+        }
+      },
+      {
+        "M": {
+          "AvailabilityStatus": {
+            "S": "unavailable"
+          },
+          "LastUpdated": {
+            "S": "2023-10-15"
+          },
+          "StockLevel": {
+            "N": "0"
+          },
+          "Type": {
+            "S": "B+"
+          }
+        }
+      }
+    ]
+  },
+  "Hours_of_Operation": {
+    "M": {
+      "Friday": {
+        "S": "8:00 am - 1:00 pm"
+      },
+      "Monday": {
+        "S": "2:00 pm - 7:00 pm"
+      },
+      "Saturday": {
+        "S": "8:00 am - 1:00 pm"
+      },
+      "Sunday": {
+        "S": "Closed"
+      },
+      "Thursday": {
+        "S": "8:00 am - 1:00 pm"
+      },
+      "Tuesday": {
+        "S": "1:00 pm - 7:00 pm"
+      },
+      "Wednesday": {
+        "S": "2:00 pm - 7:00 pm"
+      }
+    }
+  },
+  "Postal_Code": {
+    "S": "N2J 2J9"
+  }
+}
+-----------------------------------
+{
+  "Id": {
+    "S": "ON_003"
+  },
+  "Address_Line_1": {
+    "S": "100-231 Bayview Drive"
+  },
+  "Address_Line_2": {
+    "S": "Barrie ON"
+  },
+  "Area": {
+    "S": "Barrie"
+  },
+  "BloodTypes": {
+    "L": [
+      {
+        "M": {
+          "AvailabilityStatus": {
+            "S": "available"
+          },
+          "LastUpdated": {
+            "S": "2023-11-01"
+          },
+          "StockLevel": {
+            "N": "50"
+          },
+          "Type": {
+            "S": "A+"
+          }
+        }
+      },
+      {
+        "M": {
+          "AvailabilityStatus": {
+            "S": "unavailable"
+          },
+          "LastUpdated": {
+            "S": "2023-10-15"
+          },
+          "StockLevel": {
+            "N": "0"
+          },
+          "Type": {
+            "S": "B+"
+          }
+        }
+      }
+    ]
+  },
+  "Hours_of_Operation": {
+    "M": {
+      "Friday": {
+        "S": "9:00 am - 1:00 pm"
+      },
+      "Monday": {
+        "S": "Closed"
+      },
+      "Saturday": {
+        "S": "9:00 am - 1:00 pm"
+      },
+      "Sunday": {
+        "S": "Closed"
+      },
+      "Thursday": {
+        "S": "1:00 pm - 7:00 pm"
+      },
+      "Tuesday": {
+        "S": "1:00 pm - 7:00 pm"
+      },
+      "Wednesday": {
+        "S": "Closed"
+      }
+    }
+  },
+  "Postal_Code": {
+    "S": "L4N 4Y5"
+  }
+}
+----------------------------------
+{
+  "Id": {
+    "S": "ON_004"
+  },
+  "Address_Line_1": {
+    "S": "1575 Carling Avenue"
+  },
+  "Address_Line_2": {
+    "S": "Ottawa ON"
+  },
+  "Area": {
+    "S": "Ottawa"
+  },
+  "BloodTypes": {
+    "L": [
+      {
+        "M": {
+          "AvailabilityStatus": {
+            "S": "available"
+          },
+          "LastUpdated": {
+            "S": "2023-11-01"
+          },
+          "StockLevel": {
+            "N": "50"
+          },
+          "Type": {
+            "S": "A+"
+          }
+        }
+      },
+      {
+        "M": {
+          "AvailabilityStatus": {
+            "S": "unavailable"
+          },
+          "LastUpdated": {
+            "S": "2023-10-15"
+          },
+          "StockLevel": {
+            "N": "0"
+          },
+          "Type": {
+            "S": "B+"
+          }
+        }
+      }
+    ]
+  },
+  "Hours_of_Operation": {
+    "M": {
+      "Friday": {
+        "S": "8:30 am - 2:30 pm"
+      },
+      "Monday": {
+        "S": "8:50 am - 1:30 pm"
+      },
+      "Saturday": {
+        "S": "8:30 am - 2:30 pm"
+      },
+      "Sunday": {
+        "S": "Closed"
+      },
+      "Thursday": {
+        "S": "8:30 am - 2:30 pm"
+      },
+      "Tuesday": {
+        "S": "2:30 pm - 7:30 pm"
+      },
+      "Wednesday": {
+        "S": "2:30 pm - 7:30 pm"
+      }
+    }
+  },
+  "Postal_Code": {
+    "S": "K1Z 7M3"
+  }
+}
+------------------------------------------
+{
+  "Id": {
+    "S": "ON_005"
+  },
+  "Address_Line_1": {
+    "S": "850 Gardiners Road"
+  },
+  "Address_Line_2": {
+    "S": "Kingston ON"
+  },
+  "Area": {
+    "S": "Kingston"
+  },
+  "BloodTypes": {
+    "L": [
+      {
+        "M": {
+          "AvailabilityStatus": {
+            "S": "available"
+          },
+          "LastUpdated": {
+            "S": "2023-11-01"
+          },
+          "StockLevel": {
+            "N": "50"
+          },
+          "Type": {
+            "S": "A+"
+          }
+        }
+      },
+      {
+        "M": {
+          "AvailabilityStatus": {
+            "S": "unavailable"
+          },
+          "LastUpdated": {
+            "S": "2023-10-15"
+          },
+          "StockLevel": {
+            "N": "0"
+          },
+          "Type": {
+            "S": "B+"
+          }
+        }
+      }
+    ]
+  },
+  "Hours_of_Operation": {
+    "M": {
+      "Friday": {
+        "S": "Closed"
+      },
+      "Monday": {
+        "S": "Closed"
+      },
+      "Saturday": {
+        "S": "9:00 am - 2:00 pm"
+      },
+      "Sunday": {
+        "S": "Closed"
+      },
+      "Thursday": {
+        "S": "9:00 am - 1:00 pm"
+      },
+      "Tuesday": {
+        "S": "3:00 pm - 7:00 pm"
+      },
+      "Wednesday": {
+        "S": "3:00 pm - 7:00 pm"
+      }
+    }
+  },
+  "Postal_Code": {
+    "S": "K7M 3X9"
+  }
+}
+------------------------------------------
+{
+  "Id": {
+    "S": "ON_006"
+  },
+  "Address_Line_1": {
+    "S": "130 Silvercreek Parkway North"
+  },
+  "Address_Line_2": {
+    "S": "Guelph ON"
+  },
+  "Area": {
+    "S": "Guelph"
+  },
+  "BloodTypes": {
+    "L": [
+      {
+        "M": {
+          "AvailabilityStatus": {
+            "S": "available"
+          },
+          "LastUpdated": {
+            "S": "2023-11-01"
+          },
+          "StockLevel": {
+            "N": "50"
+          },
+          "Type": {
+            "S": "A+"
+          }
+        }
+      },
+      {
+        "M": {
+          "AvailabilityStatus": {
+            "S": "unavailable"
+          },
+          "LastUpdated": {
+            "S": "2023-10-15"
+          },
+          "StockLevel": {
+            "N": "0"
+          },
+          "Type": {
+            "S": "B+"
+          }
+        }
+      }
+    ]
+  },
+  "Hours_of_Operation": {
+    "M": {
+      "Friday": {
+        "S": "9:00 am - 2:00 pm"
+      },
+      "Monday": {
+        "S": "Closed"
+      },
+      "Saturday": {
+        "S": "8:00 am - 2:00 pm"
+      },
+      "Sunday": {
+        "S": "Closed"
+      },
+      "Thursday": {
+        "S": "8:00 am - 1:00 pm"
+      },
+      "Tuesday": {
+        "S": "1:00 pm - 7:00 pm"
+      },
+      "Wednesday": {
+        "S": "Closed"
+      }
+    }
+  },
+  "Postal_Code": {
+    "S": "N1H 7L7"
+  }
+}
+-------------------------------------
+{
+  "Id": {
+    "S": "ON_007"
+  },
+  "Address_Line_1": {
+    "S": "1250 Brant Street"
+  },
+  "Address_Line_2": {
+    "S": "Burlington ON"
+  },
+  "Area": {
+    "S": "Burlington"
+  },
+  "BloodTypes": {
+    "L": [
+      {
+        "M": {
+          "AvailabilityStatus": {
+            "S": "available"
+          },
+          "LastUpdated": {
+            "S": "2023-11-01"
+          },
+          "StockLevel": {
+            "N": "50"
+          },
+          "Type": {
+            "S": "A+"
+          }
+        }
+      },
+      {
+        "M": {
+          "AvailabilityStatus": {
+            "S": "unavailable"
+          },
+          "LastUpdated": {
+            "S": "2023-10-15"
+          },
+          "StockLevel": {
+            "N": "0"
+          },
+          "Type": {
+            "S": "B+"
+          }
+        }
+      }
+    ]
+  },
+  "Hours_of_Operation": {
+    "M": {
+      "Friday": {
+        "S": "8:00 am - 3:00 pm"
+      },
+      "Monday": {
+        "S": "1:00 pm - 7:00 pm"
+      },
+      "Saturday": {
+        "S": "8:00 am - 3:00 pm"
+      },
+      "Sunday": {
+        "S": "Closed"
+      },
+      "Thursday": {
+        "S": "11:00 am - 7:00 pm"
+      },
+      "Tuesday": {
+        "S": "1:00 pm - 7:00 pm"
+      },
+      "Wednesday": {
+        "S": "1:00 pm - 7:00 pm"
+      }
+    }
+  },
+  "Postal_Code": {
+    "S": "L7P 1X8"
+  }
+}
+-------------------------------------
+{
+  "Id": {
+    "S": "ON_008"
+  },
+  "Address_Line_1": {
+    "S": "765 Britannia Rd. West Unit 2"
+  },
+  "Address_Line_2": {
+    "S": "Mississauga ON"
+  },
+  "Area": {
+    "S": "Mississauga"
+  },
+  "BloodTypes": {
+    "L": [
+      {
+        "M": {
+          "AvailabilityStatus": {
+            "S": "available"
+          },
+          "LastUpdated": {
+            "S": "2023-11-01"
+          },
+          "StockLevel": {
+            "N": "50"
+          },
+          "Type": {
+            "S": "A+"
+          }
+        }
+      },
+      {
+        "M": {
+          "AvailabilityStatus": {
+            "S": "unavailable"
+          },
+          "LastUpdated": {
+            "S": "2023-10-15"
+          },
+          "StockLevel": {
+            "N": "0"
+          },
+          "Type": {
+            "S": "B+"
+          }
+        }
+      }
+    ]
+  },
+  "Hours_of_Operation": {
+    "M": {
+      "Friday": {
+        "S": "8:00 am - 2:00 pm"
+      },
+      "Monday": {
+        "S": "2:00 pm - 7:00 pm"
+      },
+      "Saturday": {
+        "S": "8:00 am - 1:00 pm"
+      },
+      "Sunday": {
+        "S": "Closed"
+      },
+      "Thursday": {
+        "S": "2:00 pm - 7:00 pm"
+      },
+      "Tuesday": {
+        "S": "2:00 pm - 7:00 pm"
+      },
+      "Wednesday": {
+        "S": "9:00 am - 2:00 pm"
+      }
+    }
+  },
+  "Postal_Code": {
+    "S": "L5V 2Y1"
+  }
+}
+------------------------------------
+{
+  "Id": {
+    "S": "ON_009"
+  },
+  "Address_Line_1": {
+    "S": "9350 Yonge Street"
+  },
+  "Address_Line_2": {
+    "S": "Richmond Hill ON"
+  },
+  "Area": {
+    "S": "Richmond Hill"
+  },
+  "BloodTypes": {
+    "L": [
+      {
+        "M": {
+          "AvailabilityStatus": {
+            "S": "available"
+          },
+          "LastUpdated": {
+            "S": "2023-11-01"
+          },
+          "StockLevel": {
+            "N": "50"
+          },
+          "Type": {
+            "S": "A+"
+          }
+        }
+      },
+      {
+        "M": {
+          "AvailabilityStatus": {
+            "S": "unavailable"
+          },
+          "LastUpdated": {
+            "S": "2023-10-15"
+          },
+          "StockLevel": {
+            "N": "0"
+          },
+          "Type": {
+            "S": "B+"
+          }
+        }
+      }
+    ]
+  },
+  "Hours_of_Operation": {
+    "M": {
+      "Friday": {
+        "S": "8:00 am - 2:00 pm"
+      },
+      "Monday": {
+        "S": "1:00 pm - 7:00 pm"
+      },
+      "Saturday": {
+        "S": "8:00 am - 2:00 pm"
+      },
+      "Sunday": {
+        "S": "Closed"
+      },
+      "Thursday": {
+        "S": "1:00 pm - 7:00 pm"
+      },
+      "Tuesday": {
+        "S": "1:00 pm - 7:00 pm"
+      },
+      "Wednesday": {
+        "S": "Closed"
+      }
+    }
+  },
+  "Postal_Code": {
+    "S": "L4C 5G2"
+  }
+}
+--------------------------------------
+{
+  "Id": {
+    "S": "ON_010"
+  },
+  "Address_Line_1": {
+    "S": "880 Warden Ave."
+  },
+  "Address_Line_2": {
+    "S": "Scarborough ON"
+  },
+  "Area": {
+    "S": "Scarborough"
+  },
+  "BloodTypes": {
+    "L": [
+      {
+        "M": {
+          "AvailabilityStatus": {
+            "S": "available"
+          },
+          "LastUpdated": {
+            "S": "2023-11-01"
+          },
+          "StockLevel": {
+            "N": "50"
+          },
+          "Type": {
+            "S": "A+"
+          }
+        }
+      },
+      {
+        "M": {
+          "AvailabilityStatus": {
+            "S": "unavailable"
+          },
+          "LastUpdated": {
+            "S": "2023-10-15"
+          },
+          "StockLevel": {
+            "N": "0"
+          },
+          "Type": {
+            "S": "B+"
+          }
+        }
+      }
+    ]
+  },
+  "Hours_of_Operation": {
+    "M": {
+      "Friday": {
+        "S": "8:00 am - 3:30 pm"
+      },
+      "Monday": {
+        "S": "Closed"
+      },
+      "Saturday": {
+        "S": "8:00 am - 3:30 pm"
+      },
+      "Sunday": {
+        "S": "Closed"
+      },
+      "Thursday": {
+        "S": "12:00 pm - 7:30 pm"
+      },
+      "Tuesday": {
+        "S": "12:00 pm - 7:30 pm"
+      },
+      "Wednesday": {
+        "S": "12:00 pm - 7:30 pm"
+      }
+    }
+  },
+  "Postal_Code": {
+    "S": "M1L 4W6"
+  }
+}
+---------------------------------------
+{
+  "Id": {
+    "S": "ON_011"
+  },
+  "Address_Line_1": {
+    "S": "2 Bloor Street East, Hudson's Bay Centre"
+  },
+  "Address_Line_2": {
+    "S": "Toronto ON"
+  },
+  "Area": {
+    "S": "Toronto (Yonge & Bloor)"
+  },
+  "BloodTypes": {
+    "L": [
+      {
+        "M": {
+          "AvailabilityStatus": {
+            "S": "available"
+          },
+          "LastUpdated": {
+            "S": "2023-11-01"
+          },
+          "StockLevel": {
+            "N": "50"
+          },
+          "Type": {
+            "S": "A+"
+          }
+        }
+      },
+      {
+        "M": {
+          "AvailabilityStatus": {
+            "S": "unavailable"
+          },
+          "LastUpdated": {
+            "S": "2023-10-15"
+          },
+          "StockLevel": {
+            "N": "0"
+          },
+          "Type": {
+            "S": "B+"
+          }
+        }
+      }
+    ]
+  },
+  "Hours_of_Operation": {
+    "M": {
+      "Friday": {
+        "S": "9:00 am - 3:00 pm"
+      },
+      "Monday": {
+        "S": "1:00 pm - 7:00 pm"
+      },
+      "Saturday": {
+        "S": "9:00 am - 3:00 pm"
+      },
+      "Sunday": {
+        "S": "Closed"
+      },
+      "Thursday": {
+        "S": "1:00 pm - 7:00 pm"
+      },
+      "Tuesday": {
+        "S": "1:00 pm - 7:00 pm"
+      },
+      "Wednesday": {
+        "S": "9:00 am - 2:00 pm"
+      }
+    }
+  },
+  "Postal_Code": {
+    "S": "M4W 1A8"
+  }
+}
+---------------------------------------------
+{
+  "Id": {
+    "S": "ON_012"
+  },
+  "Address_Line_1": {
+    "S": "67 College Street"
+  },
+  "Address_Line_2": {
+    "S": "Toronto ON"
+  },
+  "Area": {
+    "S": "Toronto (College Street)"
+  },
+  "BloodTypes": {
+    "L": [
+      {
+        "M": {
+          "AvailabilityStatus": {
+            "S": "available"
+          },
+          "LastUpdated": {
+            "S": "2023-11-01"
+          },
+          "StockLevel": {
+            "N": "50"
+          },
+          "Type": {
+            "S": "A+"
+          }
+        }
+      },
+      {
+        "M": {
+          "AvailabilityStatus": {
+            "S": "unavailable"
+          },
+          "LastUpdated": {
+            "S": "2023-10-15"
+          },
+          "StockLevel": {
+            "N": "0"
+          },
+          "Type": {
+            "S": "B+"
+          }
+        }
+      }
+    ]
+  },
+  "Hours_of_Operation": {
+    "M": {
+      "Friday": {
+        "S": "Closed"
+      },
+      "Monday": {
+        "S": "9:00 am - 2:00 pm"
+      },
+      "Saturday": {
+        "S": "8:00 am - 2:00 pm"
+      },
+      "Sunday": {
+        "S": "Closed"
+      },
+      "Thursday": {
+        "S": "2:00 pm - 7:00 pm"
+      },
+      "Tuesday": {
+        "S": "1:00 pm - 6:00 pm"
+      },
+      "Wednesday": {
+        "S": "2:00 pm - 7:00 pm"
+      }
+    }
+  },
+  "Postal_Code": {
+    "S": "M5G 2M1"
+  }
+}
+-------------------------------------
+{
+  "Id": {
+    "S": "ON_013"
+  },
+  "Address_Line_1": {
+    "S": "163 King Street West, Main Floor"
+  },
+  "Address_Line_2": {
+    "S": "Toronto ON"
+  },
+  "Area": {
+    "S": "Toronto (King Street)"
+  },
+  "BloodTypes": {
+    "L": [
+      {
+        "M": {
+          "AvailabilityStatus": {
+            "S": "available"
+          },
+          "LastUpdated": {
+            "S": "2023-11-01"
+          },
+          "StockLevel": {
+            "N": "50"
+          },
+          "Type": {
+            "S": "A+"
+          }
+        }
+      },
+      {
+        "M": {
+          "AvailabilityStatus": {
+            "S": "unavailable"
+          },
+          "LastUpdated": {
+            "S": "2023-10-15"
+          },
+          "StockLevel": {
+            "N": "0"
+          },
+          "Type": {
+            "S": "B+"
+          }
+        }
+      }
+    ]
+  },
+  "Hours_of_Operation": {
+    "M": {
+      "Friday": {
+        "S": "8:00 am - 2:00 pm"
+      },
+      "Monday": {
+        "S": "12:00 pm - 6:00 pm"
+      },
+      "Saturday": {
+        "S": "Closed"
+      },
+      "Sunday": {
+        "S": "Closed"
+      },
+      "Thursday": {
+        "S": "8:00 am - 2:00 pm"
+      },
+      "Tuesday": {
+        "S": "8:00 am - 3:00 pm"
+      },
+      "Wednesday": {
+        "S": "3:00 pm - 7:00 pm"
+      }
+    }
+  },
+  "Postal_Code": {
+    "S": "M5H 4H2"
+  }
+}
+---------------------------------------------
+{
+  "Id": {
+    "S": "ON_014"
+  },
+  "Address_Line_1": {
+    "S": "55 George Street North"
+  },
+  "Address_Line_2": {
+    "S": "Peterborough ON"
+  },
+  "Area": {
+    "S": "Peterborough"
+  },
+  "BloodTypes": {
+    "L": [
+      {
+        "M": {
+          "AvailabilityStatus": {
+            "S": "available"
+          },
+          "LastUpdated": {
+            "S": "2023-11-01"
+          },
+          "StockLevel": {
+            "N": "50"
+          },
+          "Type": {
+            "S": "A+"
+          }
+        }
+      },
+      {
+        "M": {
+          "AvailabilityStatus": {
+            "S": "unavailable"
+          },
+          "LastUpdated": {
+            "S": "2023-10-15"
+          },
+          "StockLevel": {
+            "N": "0"
+          },
+          "Type": {
+            "S": "B+"
+          }
+        }
+      }
+    ]
+  },
+  "Hours_of_Operation": {
+    "M": {
+      "Friday": {
+        "S": "8:30 am - 2:30 pm"
+      },
+      "Monday": {
+        "S": "Closed"
+      },
+      "Saturday": {
+        "S": "8:00 am - 2:00 pm"
+      },
+      "Sunday": {
+        "S": "Closed"
+      },
+      "Thursday": {
+        "S": "1:00 pm - 7:00 pm"
+      },
+      "Tuesday": {
+        "S": "1:00 pm - 7:00 pm"
+      },
+      "Wednesday": {
+        "S": "Closed"
+      }
+    }
+  },
+  "Postal_Code": {
+    "S": "K9J 3G2"
+  }
+}
+---------------------------------------------
+{
+  "Id": {
+    "S": "ON_015"
+  },
+  "Address_Line_1": {
+    "S": "1300 Harmony Road North"
+  },
+  "Address_Line_2": {
+    "S": "Oshawa ON"
+  },
+  "Area": {
+    "S": "Oshawa"
+  },
+  "BloodTypes": {
+    "L": [
+      {
+        "M": {
+          "AvailabilityStatus": {
+            "S": "available"
+          },
+          "LastUpdated": {
+            "S": "2023-11-01"
+          },
+          "StockLevel": {
+            "N": "50"
+          },
+          "Type": {
+            "S": "A+"
+          }
+        }
+      },
+      {
+        "M": {
+          "AvailabilityStatus": {
+            "S": "unavailable"
+          },
+          "LastUpdated": {
+            "S": "2023-10-15"
+          },
+          "StockLevel": {
+            "N": "0"
+          },
+          "Type": {
+            "S": "B+"
+          }
+        }
+      }
+    ]
+  },
+  "Hours_of_Operation": {
+    "M": {
+      "Friday": {
+        "S": "9:00 am - 1:00 pm"
+      },
+      "Monday": {
+        "S": "3:00 pm - 7:00 pm"
+      },
+      "Saturday": {
+        "S": "8:00 am - 2:00 pm"
+      },
+      "Sunday": {
+        "S": "Closed"
+      },
+      "Thursday": {
+        "S": "1:00 pm - 7:00 pm"
+      },
+      "Tuesday": {
+        "S": "1:00 pm - 7:00 pm"
+      },
+      "Wednesday": {
+        "S": "10:00 am - 2:00 pm"
+      }
+    }
+  },
+  "Postal_Code": {
+    "S": "L1K 2B1"
+  }
+}
+----------------------------------------------------
+{
+  "Id": {
+    "S": "ON_016"
+  },
+  "Address_Line_1": {
+    "S": "35 Stone Church Road"
+  },
+  "Address_Line_2": {
+    "S": "Ancaster ON"
+  },
+  "Area": {
+    "S": "Ancaster"
+  },
+  "BloodTypes": {
+    "L": [
+      {
+        "M": {
+          "AvailabilityStatus": {
+            "S": "available"
+          },
+          "LastUpdated": {
+            "S": "2023-11-01"
+          },
+          "StockLevel": {
+            "N": "50"
+          },
+          "Type": {
+            "S": "A+"
+          }
+        }
+      },
+      {
+        "M": {
+          "AvailabilityStatus": {
+            "S": "unavailable"
+          },
+          "LastUpdated": {
+            "S": "2023-10-15"
+          },
+          "StockLevel": {
+            "N": "0"
+          },
+          "Type": {
+            "S": "B+"
+          }
+        }
+      }
+    ]
+  },
+  "Hours_of_Operation": {
+    "M": {
+      "Friday": {
+        "S": "9:00 am - 1:00 pm"
+      },
+      "Monday": {
+        "S": "3:00 am - 7:00 pm"
+      },
+      "Saturday": {
+        "S": "9:00 am - 1:00 pm"
+      },
+      "Sunday": {
+        "S": "Closed"
+      },
+      "Thursday": {
+        "S": "3:00 pm - 7:00 pm"
+      },
+      "Tuesday": {
+        "S": "9:00 am - 1:00 pm"
+      },
+      "Wednesday": {
+        "S": "3:00 pm - 7:00 pm"
+      }
+    }
+  },
+  "Postal_Code": {
+    "S": "L9K 1S4"
+  }
+}
+------------------------------------------
+{
+  "Id": {
+    "S": "ON_017"
+  },
+  "Address_Line_1": {
+    "S": "123 Main Street"
+  },
+  "Address_Line_2": {
+    "S": "Toronto ON"
+  },
+  "Area": {
+    "S": "Toronto"
+  },
+  "BloodTypes": {
+    "L": [
+      {
+        "M": {
+          "AvailabilityStatus": {
+            "S": "available"
+          },
+          "LastUpdated": {
+            "S": "2024-11-21"
+          },
+          "StockLevel": {
+            "N": "0"
+          },
+          "Type": {
+            "S": "AB+"
+          }
+        }
+      }
+    ]
+  },
+  "Hours_of_Operation": {
+    "M": {
+      "Friday": {
+        "S": "9:00 AM - 5:00 PM"
+      },
+      "Monday": {
+        "S": "9:00 AM - 5:00 PM"
+      },
+      "Thursday": {
+        "S": "9:00 AM - 5:00 PM"
+      },
+      "Tuesday": {
+        "S": "9:00 AM - 5:00 PM"
+      },
+      "Wednesday": {
+        "S": "9:00 AM - 5:00 PM"
+      }
+    }
+  },
+  "Postal_Code": {
+    "S": "M1A 2B3"
+  }
+}
