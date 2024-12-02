@@ -5,6 +5,8 @@ using BloodBankMVC.Models;
 using BloodBank.DTOs;
 using System.Text.Json.Serialization;
 using System.Linq;
+using System.Net.Http.Json;
+using Newtonsoft.Json;
 
 namespace BloodBankMVC.Services
 {
@@ -42,10 +44,7 @@ namespace BloodBankMVC.Services
             Console.WriteLine(jsonResponse); // Log the JSON response
 
             // Deserialize the response directly to a List<BloodTypeInfo>
-            var bloodTypes = JsonSerializer.Deserialize<List<BloodTypeInfo>>(jsonResponse, new JsonSerializerOptions
-            {
-                PropertyNameCaseInsensitive = true
-            });
+            var bloodTypes = Newtonsoft.Json.JsonConvert.DeserializeObject<List<BloodTypeInfo>>(jsonResponse);
 
             return bloodTypes ?? new List<BloodTypeInfo>(); // Return the deserialized list or an empty list
         }
@@ -55,19 +54,28 @@ namespace BloodBankMVC.Services
         // Get details of a specific blood type
         public async Task<BloodTypeInfo> GetBloodTypeByIdAsync(string id, string bloodTypeId)
         {
-            var url = $"{BaseUrl}/{id}";
+            var url = $"{BaseUrl}/{id}"; // Make sure your endpoint returns a collection or filtered data
             var response = await _httpClient.GetAsync(url);
             response.EnsureSuccessStatusCode();
 
             var jsonResponse = await response.Content.ReadAsStringAsync();
-            return JsonSerializer.Deserialize<BloodTypeInfo>(jsonResponse, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
+            Console.WriteLine("JSON Response: " + jsonResponse);
+
+            var bloodTypes = JsonConvert.DeserializeObject<List<BloodTypeInfo>>(jsonResponse);
+
+            // Find the specific blood type that matches bloodTypeId
+            var bloodTypeDetails = bloodTypes.FirstOrDefault(bt => bt.Type == bloodTypeId);
+
+            return bloodTypeDetails;
         }
+
+
 
         // Add a new blood type to a donation center
         public async Task<bool> AddBloodTypeAsync(string id, BloodTypeInfo model)
         {
             var url = $"{BaseUrl}/{id}";
-            var jsonRequest = JsonSerializer.Serialize(model);
+            var jsonRequest = System.Text.Json.JsonSerializer.Serialize(model);
             var response = await _httpClient.PostAsync(url, new StringContent(jsonRequest, Encoding.UTF8, "application/json"));
             Console.WriteLine($"Saving BloodType to repository: {jsonRequest}");
             Console.WriteLine($"Saving BloodType to repository: {response}");
@@ -78,7 +86,7 @@ namespace BloodBankMVC.Services
         public async Task<bool> UpdateBloodTypeAsync(string id, BloodTypeInfo model)
         {
             var url = $"{BaseUrl}/{id}/{model.Id}";
-            var jsonRequest = JsonSerializer.Serialize(model);
+            var jsonRequest = System.Text.Json.JsonSerializer.Serialize(model);
             var response = await _httpClient.PutAsync(url, new StringContent(jsonRequest, Encoding.UTF8, "application/json"));
 
             return response.IsSuccessStatusCode;
@@ -88,7 +96,7 @@ namespace BloodBankMVC.Services
         public async Task<bool> UpdateBloodTypeStockLevelAsync(string id, string bloodTypeId, int stockLevel)
         {
             var url = $"{BaseUrl}/{id}/{bloodTypeId}";
-            var jsonRequest = JsonSerializer.Serialize(new { StockLevel = stockLevel });
+            var jsonRequest = System.Text.Json.JsonSerializer.Serialize(new { StockLevel = stockLevel });
             var response = await _httpClient.PatchAsync(url, new StringContent(jsonRequest, Encoding.UTF8, "application/json"));
 
             return response.IsSuccessStatusCode;

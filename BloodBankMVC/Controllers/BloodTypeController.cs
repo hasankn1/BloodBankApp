@@ -3,6 +3,7 @@ using BloodBank.Models;
 using BloodBankMVC.Models;
 using BloodBankMVC.Services;
 using Microsoft.AspNetCore.Mvc;
+using System.Text.Json;
 
 namespace BloodBankMVC.Controllers
 {
@@ -21,11 +22,22 @@ namespace BloodBankMVC.Controllers
             return View(bloodTypes);
         }
 
+        // [HttpGet]
         public async Task<IActionResult> Details(string id, string bloodTypeId)
         {
             var bloodTypeDetails = await _service.GetBloodTypeByIdAsync(id, bloodTypeId);
+
+            // Handle case where no blood type was found
+            if (bloodTypeDetails == null)
+            {
+                // You can either return a "Not Found" view or an error message
+                return NotFound($"Blood type {bloodTypeId} not found for Id: {id}");
+            }
+
             return View(bloodTypeDetails);
         }
+
+
 
         [HttpGet]
         public IActionResult Create(string id)
@@ -67,10 +79,34 @@ namespace BloodBankMVC.Controllers
             return RedirectToAction(nameof(Index), new { id });
         }
 
+        // GET: Display the update form
         [HttpGet]
-        public async Task<IActionResult> UpdateStockLevel(string id, string bloodTypeId, BloodTypeInfo model)
+        public async Task<IActionResult> UpdateStockLevel(string id, string bloodTypeId)
         {
-            await _service.UpdateBloodTypeStockLevelAsync(id, bloodTypeId, model.StockLevel);
+            // Fetch the blood type info to show current stock level
+            var bloodTypeDetails = await _service.GetBloodTypeByIdAsync(id, bloodTypeId);
+            if (bloodTypeDetails == null)
+            {
+                return NotFound();
+            }
+
+            return View(bloodTypeDetails); // Pass the model to the view
+        }
+
+        // POST: Handle the stock level update
+        [HttpPost]
+        public async Task<IActionResult> UpdateStockLevel(string id, string bloodTypeId, int stockLevel)
+        {
+            // Update the blood type stock level
+            bool success = await _service.UpdateBloodTypeStockLevelAsync(id, bloodTypeId, stockLevel);
+
+            if (!success)
+            {
+                // Handle failure case if needed
+                ModelState.AddModelError("", "Failed to update stock level");
+                return View(); // Re-display the form with an error message
+            }
+
             return RedirectToAction(nameof(Details), new { id, bloodTypeId });
         }
 

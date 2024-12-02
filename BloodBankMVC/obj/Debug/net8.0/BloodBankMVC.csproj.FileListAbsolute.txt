@@ -59,3 +59,4 @@ C:\Users\Hasan\Desktop\BloodBankApp-main\BloodBankMVC\obj\Debug\net8.0\BloodBank
 C:\Users\Hasan\Desktop\BloodBankApp-main\BloodBankMVC\obj\Debug\net8.0\BloodBankMVC.genruntimeconfig.cache
 C:\Users\Hasan\Desktop\BloodBankApp-main\BloodBankMVC\obj\Debug\net8.0\ref\BloodBankMVC.dll
 C:\Users\Hasan\Desktop\BloodBankApp-main\BloodBankMVC\obj\Debug\net8.0\BloodBankMVC.sourcelink.json
+C:\Users\Hasan\Desktop\BloodBankApp-main\BloodBankMVC\bin\Debug\net8.0\Newtonsoft.Json.dll

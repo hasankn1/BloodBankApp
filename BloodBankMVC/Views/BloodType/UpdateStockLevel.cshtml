@@ -1,10 +1,10 @@
-﻿@model BloodBank.DTOs.BloodTypeStockLevelDto
+﻿@model BloodBank.Models.BloodTypeInfo
 
-<h2>Update Stock Level</h2>
+<h2>Update Stock Level for: @Model.Type</h2>
 
-<form method="post">
+<form method="post" asp-action="UpdateStockLevel" asp-route-id="@Model.Id" asp-route-bloodTypeId="@Model.Type">
     <label for="StockLevel">New Stock Level</label>
-    <input type="number" name="StockLevel" value="@Model.StockLevel" />
+    <input type="number" name="stockLevel" value="@Model.StockLevel" />
 
     <button type="submit">Update Stock Level</button>
 </form>
