@@ -1,6 +1,6 @@
 ﻿# BloodBankApp
 Prepare Data: 
-	AWS DynamoDB (Link to the sample data here)
+	AWS DynamoDB ([Link to the sample data here](https://github.com/hasankn1/BloodBankAppNEW-main/blob/master/Blood_Donation_Centers%20dynamodb%20table%20in%20json%20format.txt))
 
 API Implementation: 
 	C# .NET 8.0 (Class Library), 
