@@ -1,36 +1,48 @@
 ﻿@model BloodBank.Models.DonationCenter
 
 <h2>Create New Donation Center</h2>
+
 <form method="post" asp-action="Create">
-    <label for="Id">Id</label>
-    <input type="text" name="Id" />
+    <!-- Hidden field for Id and Area -->
+    <label for="Id">ID</label>
+    <input type="text" name="Id" value="@Model.Id" />
 
     <label for="Area">Area</label>
-    <input type="text" name="Area" />
+    <input type="text" name="Area" value="@Model.Area" />
 
+    <!-- Address fields -->
     <label for="AddressLine1">Address Line 1</label>
-    <input type="text" name="AddressLine1" />
+    <input type="text" id="AddressLine1" name="AddressLine1" value="@Model.AddressLine1" />
 
     <label for="AddressLine2">Address Line 2</label>
-    <input type="text" name="AddressLine2" />
+    <input type="text" id="AddressLine2" name="AddressLine2" value="@Model.AddressLine2" />
 
     <label for="PostalCode">Postal Code</label>
-    <input type="text" name="PostalCode" />
+    <input type="text" id="PostalCode" name="PostalCode" value="@Model.PostalCode" />
 
-    <label for="BloodTypes">Blood Types</label>
-    <div id="BloodTypesContainer">
-        <input type="text" name="BloodTypes[0].Type" placeholder="Blood Type" />
-        <input type="number" name="BloodTypes[0].StockLevel" placeholder="Stock Level" />
-        <input type="text" name="BloodTypes[0].AvailabilityStatus" placeholder="Availability Status" />
-        <input type="datetime-local" name="BloodTypes[0].LastUpdated" placeholder="Last Updated" />
+    <!-- Hours of Operation -->
+    <h3>Hours of Operation</h3>
+    <ul>
+        @foreach (var hours in Model.HoursOfOperation)
+        {
+            <li>
+                <label for="HoursOfOperation_@hours.Key">@hours.Key</label>
+                <input type="text" id="HoursOfOperation_@hours.Key"
+                       name="HoursOfOperation[@hours.Key]"
+                       value="@hours.Value"
+                       placeholder="Enter hours (e.g., 9 AM - 5 PM)" />
+            </li>
+        }
+    </ul>
 
-        <!-- Add more blood types dynamically (optional) -->
-    </div>
+    <!-- Blood Types (Optional: Read-only or editable) -->
+    <h3>Blood Types Available</h3>
+    <ul>
+        <input type="hidden" name="BloodTypes" value="@Model.BloodTypes" />
+    </ul>
 
-    <label for="HoursOfOperation">Hours of Operation</label>
-    <input type="text" name="HoursOfOperation" />
-
-    <button type="submit">Create</button>
+    <button type="submit">Update</button>
 </form>
+
 
 <a href="@Url.Action("Index")">Cancel</a>

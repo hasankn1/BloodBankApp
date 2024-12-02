@@ -27,22 +27,47 @@ namespace BloodBankMVC.Controllers
             return View(bloodTypeDetails);
         }
 
+        [HttpGet]
+        public IActionResult Create(string id)
+        {
+            var model = new BloodTypeInfo
+            {
+                Id = id,
+                LastUpdated = DateTime.UtcNow
+            };
+
+            return View(model); // Render the form with an empty model
+        }
         [HttpPost]
         public async Task<IActionResult> Create(string id, BloodTypeInfo model)
         {
-            model.Id = id; // Set the Id to the current Donation Center
-            await _service.AddBloodTypeAsync(id, model);
-            return RedirectToAction(nameof(Index), new { id });
+            if (ModelState.IsValid)
+            {
+                model.Id = id;
+                model.LastUpdated = DateTime.UtcNow;
+
+                bool result = await _service.AddBloodTypeAsync(id, model);
+                if (result)
+                {
+                    return RedirectToAction(nameof(Index), new { id });
+                }
+                else
+                {
+                    ModelState.AddModelError("", "Failed to add Blood Type.");
+                }
+            }
+            return View(model); // If the form fails validation, show the same view with errors
         }
 
-        [HttpPost]
+
+        [HttpGet]
         public async Task<IActionResult> Edit(string id, BloodTypeInfo model)
         {
             await _service.UpdateBloodTypeAsync(id, model);
             return RedirectToAction(nameof(Index), new { id });
         }
 
-        [HttpPost]
+        [HttpGet]
         public async Task<IActionResult> UpdateStockLevel(string id, string bloodTypeId, BloodTypeInfo model)
         {
             await _service.UpdateBloodTypeStockLevelAsync(id, bloodTypeId, model.StockLevel);
@@ -50,11 +75,20 @@ namespace BloodBankMVC.Controllers
         }
 
 
-        [HttpPost]
+        [HttpGet]
         public async Task<IActionResult> Delete(string id, string bloodTypeId)
         {
-            await _service.DeleteBloodTypeAsync(id, bloodTypeId);
-            return RedirectToAction(nameof(Index), new { id });
+            var isDeleted = await _service.DeleteBloodTypeAsync(id, bloodTypeId);
+
+            if (isDeleted)
+            {
+                return RedirectToAction(nameof(Index), new { id });
+            }
+            else
+            {
+                ModelState.AddModelError("", $"Failed to delete blood type '{bloodTypeId}' for Donation Center '{id}'.");
+                return View(); // Return to the view in case of failure
+            }
         }
     }
 }

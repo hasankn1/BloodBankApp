@@ -473,8 +473,7 @@
           },
           "type": {
             "type": "string",
-            "nullable": true,
-            "readOnly": true
+            "nullable": true
           },
           "availabilityStatus": {
             "type": "string",

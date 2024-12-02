@@ -9,6 +9,7 @@
 <ul>
     @foreach (var bloodType in Model.BloodTypes)
     {
+        <!--<li>@bloodType.Type</li>-->
         <li>@bloodType.Type</li>
     }
 </ul>
@@ -25,7 +26,7 @@
 <form method="post" asp-action="UpdateHours" asp-route-id="@Model.Id">
     <!-- Hidden fields for required values -->
     <input type="hidden" name="Area" value="@Model.Area" />
-    <input type="hidden" name="BloodTypes" value="@string.Join(",", Model.BloodTypes.Select(bt => bt.Type))" />
+    <input type="hidden" name="BloodTypes" value="@Model.BloodTypes" />
     <input type="hidden" name="PostalCode" value="@Model.PostalCode" />
     <input type="hidden" name="AddressLine1" value="@Model.AddressLine1" />
     <input type="hidden" name="AddressLine2" value="@Model.AddressLine2" />
@@ -46,5 +47,4 @@
 </form>
 
 <a href="@Url.Action("Edit", new { id = Model.Id })">Edit</a> |
-<a href="@Url.Action("Delete", new { id = Model.Id })">Delete</a> |
-<a href="@Url.Action("UpdateHours", new { id = Model.Id })">Update Hours</a>
+<a href="@Url.Action("Delete", new { id = Model.Id })">Delete</a>

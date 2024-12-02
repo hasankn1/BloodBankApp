@@ -10,3 +10,4 @@ C:\Users\Hasan\Desktop\BloodBankApp-main\BloodBank\obj\Debug\net8.0\BloodBank.dl
 C:\Users\Hasan\Desktop\BloodBankApp-main\BloodBank\obj\Debug\net8.0\refint\BloodBank.dll
 C:\Users\Hasan\Desktop\BloodBankApp-main\BloodBank\obj\Debug\net8.0\BloodBank.pdb
 C:\Users\Hasan\Desktop\BloodBankApp-main\BloodBank\obj\Debug\net8.0\ref\BloodBank.dll
+C:\Users\Hasan\Desktop\BloodBankApp-main\BloodBank\obj\Debug\net8.0\BloodBank.sourcelink.json

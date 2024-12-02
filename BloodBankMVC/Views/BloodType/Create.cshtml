@@ -1,16 +1,30 @@
 ﻿@model BloodBank.Models.BloodTypeInfo
 
-<h2>Create New Blood Type for Area: @Model.Area, @Model.Id</h2>
+<h2>Create New Blood Type for ID: @Model.Id</h2>
 
-<form method="post" asp-action="Create">
-    <label for="Type">Blood Type</label>
-    <input type="text" name="Type" value="@Model.Type" />
+<form method="post" asp-action="Create" asp-route-id="@Model.Id">
+    <div class="form-group">
+        <label for="Type">Blood Type</label>
+        <input type="text" class="form-control" id="Type" name="Type" value="@Model.Type" required />
+    </div>
 
-    <label for="StockLevel">Stock Level</label>
-    <input type="number" name="StockLevel" value="@Model.StockLevel" />
+    <div class="form-group">
+        <label for="AvailabilityStatus">Availability Status</label>
+        <input type="text" class="form-control" id="AvailabilityStatus" name="AvailabilityStatus" value="@Model.AvailabilityStatus" required />
+    </div>
 
-    <label for="AvailabilityStatus">Availability Status</label>
-    <input type="text" name="AvailabilityStatus" value="@Model.AvailabilityStatus" />
+    <div class="form-group">
+        <label for="StockLevel">Stock Level</label>
+        <input type="number" class="form-control" id="StockLevel" name="StockLevel" value="@Model.StockLevel" required />
+    </div>
 
-    <button type="submit">Create</button>
+    <div class="form-group">
+        <label for="LastUpdated">Last Updated</label>
+        <input type="datetime-local" class="form-control" id="LastUpdated" name="LastUpdated"
+               value="@Model.LastUpdated.ToString("yyyy-MM-ddTHH:mm")" required />
+    </div>
+    <input type="hidden" name="Id" value="@Model.Id"/>
+    <input type="hidden" name="Area" value="@Model.Area"/>
+
+    <button type="submit" class="btn btn-primary">Add Blood Type</button>
 </form>

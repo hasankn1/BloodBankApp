@@ -42,3 +42,4 @@ C:\Users\Hasan\Desktop\BloodBankApp-main\BloodBankAPI\bin\Debug\net8.0\BloodBank
 C:\Users\Hasan\Desktop\BloodBankApp-main\BloodBankAPI\obj\Debug\net8.0\staticwebassets.build.endpoints.json
 C:\Users\Hasan\Desktop\BloodBankApp-main\BloodBankAPI\obj\Debug\net8.0\staticwebassets\msbuild.BloodBankAPI.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
 C:\Users\Hasan\Desktop\BloodBankApp-main\BloodBankAPI\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+C:\Users\Hasan\Desktop\BloodBankApp-main\BloodBankAPI\obj\Debug\net8.0\BloodBankAPI.sourcelink.json

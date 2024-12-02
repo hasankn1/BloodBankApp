@@ -5,7 +5,8 @@
 <table>
     <thead>
         <tr>
-            <th>| Area & Id |</th>
+            <th>| ID |</th>
+            <th>| Area |</th>
             <th>| Address |</th>
             <th>| Blood Types Available |</th>
             <th>| Actions |</th>
@@ -15,22 +16,21 @@
         @foreach (var center in Model)
         {
             <tr>
-                <td>@center.Area, @center.Id</td>
+                <td>| @center.Id |</td>
+                <td>| @center.Area |</td>
                 <td>@center.AddressLine1, @center.AddressLine2, @center.PostalCode</td>
                 <td>
                     <ul>
                         @foreach (var bloodType in center.BloodTypes)
                         {
-                            <li>@bloodType.StockLevel</li>
-                            <li>@bloodType.AvailabilityStatus</li>
+                            <li>@bloodType.Type - @bloodType.StockLevel - @bloodType.AvailabilityStatus</li>
                         }
                     </ul>
                 </td>
                 <td>
                     <a href="@Url.Action("Details", new { Id = center.Id })">Details</a> |
                     <a href="@Url.Action("Edit", new { Id = center.Id })">Edit</a> |
-                    <a href="@Url.Action("Delete", new { Id = center.Id })">Delete</a> |
-                    <a href="@Url.Action("UpdateHours", new { Id = center.Id })">Update Hours</a>
+                    <a href="@Url.Action("Delete", new { Id = center.Id })">Delete</a>
                 </td>
             </tr>
         }

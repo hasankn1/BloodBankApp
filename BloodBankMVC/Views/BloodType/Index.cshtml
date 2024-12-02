@@ -21,12 +21,13 @@
                 <td>@bloodType.AvailabilityStatus</td>
                 <td>@bloodType.LastUpdated</td>
                 <td>
-                    <a href="@Url.Action("Details", new { areaId = bloodType.Area, bloodTypeId = bloodType.Type })">Details</a> |
+                    <a href="@Url.Action("Details", new { Id = bloodType.Id, bloodTypeId = bloodType.Type })">Details</a> |
                     <a href="@Url.Action("Edit", new { Id = bloodType.Id, bloodTypeId = bloodType.Type })">Edit</a> |
-                    <a href="@Url.Action("Delete", new { Id = bloodType.Id, bloodTypeId = bloodType.Type })">Delete</a> |
-                    <a href="@Url.Action("Create", new { Id = bloodType.Id })">Add Blood Type</a>
+                    <a href="@Url.Action("Update", new { Id = bloodType.Id, bloodTypeId = bloodType.Type })">Update Stock Levels</a> |
+                    <a href="@Url.Action("Delete", new { id = bloodType.Id, bloodTypeId = bloodType.Type })" class="btn btn-danger">Delete</a>
                 </td>
             </tr>
         }
     </tbody>
 </table>
+<a href="@Url.Action("Create", "BloodType", new { @Model.FirstOrDefault()?.Id })" class="btn btn-primary">Add Blood Type</a>

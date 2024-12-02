@@ -4,8 +4,8 @@
 
 <p>Are you sure you want to delete this blood type?</p>
 
-<form method="post" asp-action="Delete" asp-route-id="@Model.Type">
-    <button type="submit">Delete</button>
+<form method="post" asp-action="Delete" asp-route-id="@Model.Id" asp-route-bloodTypeId="@Model.Type">
+    <button type="submit" class="btn btn-danger">Delete</button>
 </form>
 
-<a href="@Url.Action("Index")>Cancel</a>
+<a href="@Url.Action("Index", new { id = Model.Id })" class="btn btn-secondary">Cancel</a>

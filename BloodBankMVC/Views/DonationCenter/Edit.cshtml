@@ -1,29 +1,38 @@
 ﻿@model BloodBank.Models.DonationCenter
-@if (TempData["SuccessMessage"] != null)
-{
-    <div class="alert alert-success">
-        @TempData["SuccessMessage"]
-    </div>
-}
 
-@if (TempData["ErrorMessage"] != null)
-{
-    <div class="alert alert-danger">
-        @TempData["ErrorMessage"]
-    </div>
-}
+
 <h2>Edit Donation Center: @Model.Id, @Model.Area</h2>
 
 <form method="post" asp-action="Edit" asp-route-id="@Model.Id">
+    <!-- Hidden field for Id and Area -->
+    <input type="hidden" name="Id" value="@Model.Id" />
+    <input type="hidden" name="Area" value="@Model.Area" />
+    <input type="hidden" name="BloodTypes" value="@Model.BloodTypes" />
+
+    <!-- Address fields -->
     <label for="AddressLine1">Address Line 1</label>
-    <input type="text" name="AddressLine1" value="@Model.AddressLine1" />
+    <input type="text" id="AddressLine1" name="AddressLine1" value="@Model.AddressLine1" />
 
     <label for="AddressLine2">Address Line 2</label>
-    <input type="text" name="AddressLine2" value="@Model.AddressLine2" />
+    <input type="text" id="AddressLine2" name="AddressLine2" value="@Model.AddressLine2" />
 
     <label for="PostalCode">Postal Code</label>
-    <input type="text" name="PostalCode" value="@Model.PostalCode" />
+    <input type="text" id="PostalCode" name="PostalCode" value="@Model.PostalCode" />
+
+    <!-- Hours of Operation -->
+    <h3>Hours of Operation</h3>
+    <ul>
+        @foreach (var hours in Model.HoursOfOperation)
+        {
+            <li>
+                <label for="HoursOfOperation_@hours.Key">@hours.Key</label>
+                <input type="text" id="HoursOfOperation_@hours.Key"
+                       name="HoursOfOperation[@hours.Key]"
+                       value="@hours.Value"
+                       placeholder="Enter hours (e.g., 9 AM - 5 PM)" />
+            </li>
+        }
+    </ul>
 
     <button type="submit">Update</button>
 </form>
-
