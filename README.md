@@ -134,7 +134,7 @@ Adding New Blood Types:
 
 ## 🤝 Contributing
 
-@z-zohra
+[@z-zohra](https://github.com/z-zohra)
 
 ## 📜 License
 
