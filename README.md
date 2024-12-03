@@ -1,9 +1,9 @@
-🩸 BloodBankApp
+# 🩸 BloodBankApp
 
 ## 🚀 Overview
 
-The BloodBankApp is a full-stack project showcasing API development, containerization, cloud deployment, and MVC client consumption. 
-It features an ASP.NET Core Web API with CRUD operations for blood donation centers and blood types, fully integrated with AWS ECS and managed through Google Apigee.
+    The BloodBankApp is a full-stack project showcasing API development, containerization, cloud deployment, and MVC client consumption. 
+    It features an ASP.NET Core Web API with CRUD operations for blood donation centers and blood types, fully integrated with AWS ECS and managed through Google Apigee.
 
 ## 🌟 Features
 
@@ -23,9 +23,9 @@ It features an ASP.NET Core Web API with CRUD operations for blood donation cent
 
 ## 📋 Prerequisites
 
-    DynamoDB Table: Populate sample data using this [JSON file](https://github.com/hasankn1/BloodBankAppNEW-main/blob/master/Blood_Donation_Centers%20dynamodb%20table%20in%20json%20format.txt).
-    AWS IAM Credentials: Ensure valid access to AWS services.
-    Docker Desktop: Run containers using Linux mode.
+DynamoDB Table: Populate sample data using this [JSON file](https://github.com/hasankn1/BloodBankAppNEW-main/blob/master/Blood_Donation_Centers%20dynamodb%20table%20in%20json%20format.txt).
+AWS IAM Credentials: Ensure valid access to AWS services.
+Docker Desktop: Run containers using Linux mode.
 
 ## 📂 Project Structure
 
@@ -132,10 +132,10 @@ Adding New Blood Types:
     Cloud Services: AWS DynamoDB, ECS, ECR, IAM, Google Apigee
     Tools: Docker, Visual Studio, Postman
 
-🤝 Contributing
+## 🤝 Contributing
 
 @z-zohra
 
-📜 License
+## 📜 License
 
 This project is licensed under the MIT License.
