@@ -1,12 +1,12 @@
-#🩸 BloodBankApp
-----------------
+🩸 BloodBankApp
+
 ## 🚀 Overview
-----------------
+
 The BloodBankApp is a full-stack project showcasing API development, containerization, cloud deployment, and MVC client consumption. 
 It features an ASP.NET Core Web API with CRUD operations for blood donation centers and blood types, fully integrated with AWS ECS and managed through Google Apigee.
-------------------------
+
 ## 🌟 Features
--------------
+
     API Implementation:
         Built with C# .NET 8.0 and ASP.NET 8.0 Web API.
         Repository pattern and AutoMapper for DTO mappings.
@@ -20,23 +20,23 @@ It features an ASP.NET Core Web API with CRUD operations for blood donation cent
     Client Consumption:
         ASP.NET Core MVC Web App to interact with the API.
         Demonstrates all API functionalities through an elegant UI.
-------------------
+
 ## 📋 Prerequisites
--------------------
+
     DynamoDB Table: Populate sample data using this [JSON file](https://github.com/hasankn1/BloodBankAppNEW-main/blob/master/Blood_Donation_Centers%20dynamodb%20table%20in%20json%20format.txt).
     AWS IAM Credentials: Ensure valid access to AWS services.
     Docker Desktop: Run containers using Linux mode.
-------------------------
+
 ## 📂 Project Structure
-----------------------
+
 BloodBankApp/
 ├── BloodBank/            # ASP .NET Class Libbrary
 ├── BloodBankAPI/         # ASP.NET Web API
 ├── BloodBankMVC/         # ASP.NET MVC Client
 └── README.md             # Project documentation
------------------------
+
 ## 🛠️ How to Run the Project
-----------------------------
+
 First populate the sample data in your DynamoDB table 'Blood_Donation_Centers'.
 
 Open the project, and ensure Docker Desktop is running and is using 'Linux Containers'
@@ -85,9 +85,9 @@ Reminder, you can also load up the API locally (using http), without doing the E
 Remember to change the BaseUrl to this if running locally (for both BloodTypeService and DonationCenter adding the api/DonationCenter and api/BloodType)
 Change the BloodBankMVC to 'https', and run (after opening another Visual Studio)
 ![Screenshot 2024-12-02 162212](https://github.com/user-attachments/assets/6c26ca95-4eb8-41f9-b9e3-0c778ceba765)
--------------------------------------
+
 ## 🖼️ Screenshots
------------------
+
 Home Page:
 ![Screenshot 2024-12-02 162300](https://github.com/user-attachments/assets/5993fa56-aa65-4db5-b49c-f567f436826c)
 
@@ -124,18 +124,18 @@ Deleted Blood Type:
 Adding New Blood Types:
 ![Screenshot 2024-12-02 162544](https://github.com/user-attachments/assets/aebc1526-3487-4634-a71a-d95fa77f1193)
 ![Screenshot 2024-12-02 162625](https://github.com/user-attachments/assets/7fe2e131-8fd2-4d10-b7a9-44298c3b0a30)
--------------------------------
+
 ## 🧩 Technical Stack
-------------------------
+
     Languages: C#, JSON
     Frameworks: .NET 8.0, ASP.NET Core MVC
     Cloud Services: AWS DynamoDB, ECS, ECR, IAM, Google Apigee
     Tools: Docker, Visual Studio, Postman
--------------------------
+
 🤝 Contributing
-------------------------
+
 @z-zohra
---------------
+
 📜 License
----------------
+
 This project is licensed under the MIT License.
