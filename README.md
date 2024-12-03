@@ -134,8 +134,6 @@ Adding New Blood Types:
 
 ## 🤝 Contributing
 
-[@z-zohra](https://github.com/z-zohra)
-
 ## 📜 License
 
-This project is licensed under the MIT License.
+    This project is licensed under the MIT License.
