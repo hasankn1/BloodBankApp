@@ -29,11 +29,11 @@ Docker Desktop: Run containers using Linux mode.
 
 ## 📂 Project Structure
 
-BloodBankApp/
-├── BloodBank/            # ASP .NET Class Libbrary
-├── BloodBankAPI/         # ASP.NET Web API
-├── BloodBankMVC/         # ASP.NET MVC Client
-└── README.md             # Project documentation
+    BloodBankApp/
+    ├── BloodBank/            # ASP .NET Class Libbrary
+    ├── BloodBankAPI/         # ASP.NET Web API
+    ├── BloodBankMVC/         # ASP.NET MVC Client
+    └── README.md             # Project documentation
 
 ## 🛠️ How to Run the Project
 
